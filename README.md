@@ -1,6 +1,6 @@
 # BENVENUE SUR PULSE 
 
-Ceci est mon premier projet php, Pulse est réseaux social afin de partager vos photos, ajouter vos amis et bientôt bien plus encore. Actuellment vous pouvez trouver des utilisateurs consulter leurs profils ainsi que leurs posts vous pouvez aussi vous inscrire afin de découvrir toute les fonctionnalités du site. 😁
+Ceci est mon premier projet php, Pulse est un réseaux social qui permet de partager vos photos, ajouter vos amis et bientôt bien plus encore. Actuellement vous pouvez trouver des utilisateurs consulter leurs profils ainsi que leurs posts vous pouvez aussi vous inscrire afin de découvrir toute les fonctionnalités du site. 😁
 
 ## CONFIGURATION ⚙️
 
