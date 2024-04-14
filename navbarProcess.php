@@ -11,9 +11,9 @@ if (isset($_GET['search']) and !empty($_GET['search'])) {
         // Rediriger vers allUsers.php avec le paramètre de recherche dans l'URL
 
         Utils::redirect('allUsers.php?search=' . urlencode($search));
-        exit(); // Arrêter l'exécution du script après la redirection
+        exit();
     } else {
-        // Aucun résultat trouvé, vous pouvez rediriger avec un message d'erreur si nécessaire
+        // Aucun résultat trouvé
         Utils::redirect('allUsers.php?error=no_results');
         exit();
     }
