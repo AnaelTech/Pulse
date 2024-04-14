@@ -35,7 +35,7 @@ Si vous voulez avoir un aperçu sans vous inscrire voici les identifiants d'un u
 - [UserPost.php: classe utilisée pour récuperer les posts des amis](classes/UserPost.php)
 - [FriendshipsTable.php: classe utilisé pour récupérer les noms et prénoms des amis](classes/FriendshipsTable.php)
 
-Je me suis un peu compliqué la tâche à vouloir tout séparer dans mon code et je pense avoir manquer d'organisation ce qui fais que j'aurais probablement pu mettre ses functions ensemble j'ai l'impression que je peux récupérer les données des amis dans les deux classes donc ils se ressemble fortement et j'aurais donc pu refactoriser cette partie de mon code. 
+Je me suis un peu compliqué la tâche à vouloir tout séparer dans mon code et je pense avoir manquer d'organisation ce qui fais que j'aurais probablement pu mettre ses methodes ensemble j'ai l'impression que je peux récupérer les données des amis dans les deux classes donc ils se ressemble fortement et j'aurais donc pu refactoriser cette partie de mon code. 
 
 ```php
 try {
@@ -68,7 +68,7 @@ Une fonctionnalités assez simple à mettre en place, la difficultés était de 
 
 Pour les problèmes de code et message d'erreur il était plutôt difficile de travailler sans xdebug pour utiliser le pas à pas. J'ai donc utilisé les exit(); et les var_dump pour voir si mes données étaient bien enregistré au fur et à mesure. 
 
-## BADGES 💻
+## OUTILS 💻
 
 Voila ce que j'ai utilisé pour ce projet : 
 
