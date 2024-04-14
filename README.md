@@ -1,6 +1,6 @@
 # BENVENUE SUR PULSE 
 
-Ceci est mon premier projet php, Pulse est un réseaux social qui permet de partager vos photos, ajouter vos amis et bientôt bien plus encore. Actuellement vous pouvez trouver des utilisateurs consulter leurs profils ainsi que leurs posts vous pouvez aussi vous inscrire afin de découvrir toute les fonctionnalités du site. 😁
+Ceci est mon premier projet php, Pulse est un réseau social qui permet de partager vos photos, ajouter vos amis et bientôt bien plus encore. Actuellement vous pouvez trouver des utilisateurs consultés leurs profils ainsi que leurs posts vous pouvez aussi vous inscrire afin de découvrir toutes les fonctionnalités du site. 😁
 
 ## CONFIGURATION ⚙️
 
@@ -14,9 +14,9 @@ DB_CHARSET="utf8mb4"
 DB_USER="user"
 DB_PASSWORD="password"
 ```
-Vous trouverez dans le dossier data la base de donnée que j'ai utilisé vous pouvez la copier et coller dans votre serveur. 
+Vous trouverez dans le dossier data la base de données que j'ai utilisé, vous pouvez la copier et coller dans votre serveur. 
 
-Si vous voulez avoir un aperçu sans vous inscrire voici les identifiants d'un utilisateur que j'ai créer : 
+Si vous voulez avoir un aperçu sans vous inscrire voici les identifiants d'un utilisateur que j'ai créé : 
 
 **_Email_**: test@test.net
 
@@ -26,7 +26,7 @@ Si vous voulez avoir un aperçu sans vous inscrire voici les identifiants d'un u
 
 - Mise en forme du Front 
 - Possibilité de delete ses posts 
-- Ajout des commentaires, likes et date (oublie de ma part lors de mes requêtes 😅)
+- Ajout des commentaires, likes, date (oublie de ma part lors de mes requêtes 😅) et about
 - Meilleure gestion des erreurs
 - Refactoriser
 
@@ -35,7 +35,7 @@ Si vous voulez avoir un aperçu sans vous inscrire voici les identifiants d'un u
 - [UserPost.php: classe utilisée pour récuperer les posts des amis](classes/UserPost.php)
 - [FriendshipsTable.php: classe utilisé pour récupérer les noms et prénoms des amis](classes/FriendshipsTable.php)
 
-Je me suis un peu compliqué la tâche à vouloir tout séparer dans mon code et je pense avoir manquer d'organisation ce qui fais que j'aurais probablement pu mettre ses methodes ensemble j'ai l'impression que je peux récupérer les données des amis dans les deux classes donc ils se ressemble fortement et j'aurais donc pu refactoriser cette partie de mon code. 
+Je me suis un peu compliqué la tâche à vouloir tout séparer dans mon code et je pense avoir manqué d'organisation. J'aurais probablement pu assembler ses méthodes, étant donné que je peux récupérer les données des amis dans les deux classes. Ils se ressemble fortement et j'aurais donc pu refactoriser cette partie de mon code. 
 
 ```php
 try {
@@ -55,22 +55,22 @@ $posts = array_merge($postDb->findAll());
 - [navbarProcess.php: cette page récupére les données GET de ma barre de recherche et redirgire vers la page d'affichage](navbarProcess.php)
 - [allUsers.php: cette page récupére et affiche les données de la requêtes](allUsers.php)
 
-Comme dis plus haut je pense avoir compliqué la tâche je récupere donc les données de mon formulaire en méthode GET donc dans l'url et j'utilise htmlspecialchars qui convertit les caractères spéciaux de ma requête en entités html je traite celui ci et l'envoie vers allUsers.php  qui traitera donc la donnée encore une fois et l'affichera.  
+Comme dis plus haut je pense avoir compliqué la tâche je récupère donc les données de mon formulaire en méthode GET (dans l'url) et j'utilise **htmlspecialchars** qui convertit les caractères spéciaux de ma requête en entités html. Je traite celui-ci et l'envoie vers allUsers.php  qui traitera donc la donnée encore une fois et l'affichera.  
 Je traite deux fois les données et je pense pouvoir le faire en une seule fois ceci est donc un axe d'amélioration dans mes updates. 
 
 ## FRIEND 🤝
 - [allUsers.php: affiche les utilisateurs après la recherche](allUsers.php)
 - [FriendshipsTable.php: classe qui permet d'ajouter un utilisateur a ses amis](classes/FriendshipsTable.php)
 
-Une fonctionnalités assez simple à mettre en place, la difficultés était de récupérer les informations des Users avec les requêtes sql inner join que je n'avais pas beaucoup pratiquer mais dans l'ensemble cela c'est bien passé. 
+Une fonctionnalité assez simple à mettre en place, la difficulté était de récupérer les informations des Users avec les requêtes sql inner join que je n'avais pas beaucoup pratiqué mais dans l'ensemble cela c'est bien passé. 
 
 ## DEBUG 🔨
 
-Pour les problèmes de code et message d'erreur il était plutôt difficile de travailler sans xdebug pour utiliser le pas à pas. J'ai donc utilisé les exit(); et les var_dump pour voir si mes données étaient bien enregistré au fur et à mesure. 
+Pour les problèmes de code et message d'erreur il était plutôt difficile de travailler sans xdebug pour utiliser le pas-à-pas. J'ai donc utilisé les **exit()**; et les **var_dump** pour voir si mes données étaient bien enregistrées au fur et à mesure. 
 
 ## OUTILS 💻
 
-Voila ce que j'ai utilisé pour ce projet : 
+Voilà ce que j'ai utilisé pour ce projet : 
 
  ![mysql](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
