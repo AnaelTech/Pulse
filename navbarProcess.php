@@ -9,7 +9,6 @@ if (isset($_GET['search']) and !empty($_GET['search'])) {
     $allusers = $pdo->query('SELECT user_name FROM Users WHERE user_name LIKE "%' . $search . '%"');
     if ($allusers->rowCount() > 0) {
         // Rediriger vers allUsers.php avec le paramètre de recherche dans l'URL
-
         Utils::redirect('allUsers.php?search=' . urlencode($search));
         exit();
     } else {
