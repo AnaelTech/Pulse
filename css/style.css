@@ -1,1 +1,124 @@
+#Alert {
+    transition: opacity 0.5s ease-out; /* Transition fluide sur 1 seconde */
+}
+
+#Alert.hide {
+    opacity: 0; /* Cache l'alerte progressivement */
+    visibility: hidden; /* Enlève du flux de la page après */
+}
+
+
+
+#nav-home {
+    transition: top 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(10px); 
+    
+    /*INPUT*/
+    .form-control {
+        border: 2px solid #FFDFD1; 
+        box-shadow: none; 
+    }
+    
+    .form-control:focus {
+        border-color: #FFD1E8; 
+        box-shadow: 0 0 5px rgba(255, 209, 232, 0.5); 
+    }
+    
+
+    /*BRAND*/
+    .brand {
+        flex: 1;
+    }
+
+    .brand img {
+        max-width: 100%;
+        width: 60px;
+        height: auto;
+    }
+
+    /*FORMULAIRE*/
+    .form-control {
+        border: 2px solid #FFDFD1; 
+        box-shadow: none; 
+    }
+
+    .form-control:focus {
+        border-color: #FFD1E8; 
+    box-shadow: 0 0 5px rgba(255, 209, 232, 0.5); 
+    }
+
+    /*BOUTON*/
+    .btn-outline-primary {
+        border-color: #FF6B6B; 
+        background-color: #FF6B6B; 
+        color: white; 
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: #FF4C4C;
+        border-color: #FF4C4C; 
+        color: white; 
+    }
+
+}
+
+#hero { 
+
+        background: radial-gradient(circle at 15% 50%, #FFDFD1, transparent 20%),
+                radial-gradient(circle at 85% 50%, #D1EFFF, transparent 20%),
+                radial-gradient(circle at 50% 10%, #FFD1E8, transparent 30%),
+                linear-gradient(135deg, #FFF0E5, #E2E6EF);
+        padding: 250px 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        /*CONTENU*/
+        .hero-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            align-items: center;
+        }
+
+        /*TITRE*/
+        h1 {
+            font-weight: 600px;
+            font-size: 57px;
+        }
+
+        /*TEXTE*/
+        home-text {
+            flex: 1; 
+            padding-right: 50px; 
+        }
+
+        /*BOUTON*/
+        .btn {
+            padding: 10px 20px;
+            border-color: #FF6B6B; 
+            background-color: #FF6B6B; 
+            color: white;   
+        }
+
+        .btn:hover {
+            background-color: #FF4C4C; 
+            border-color: #FF4C4C; 
+            color: white; 
+        }
+
+        /*IMAGE*/
+
+        .img-home img {
+            max-width: 100%;
+            width: 950px;
+            height: auto;
+        }
+
+        .img-home {
+            flex: 1; /* L'image occupe 50% de la largeur */
+            text-align: right; /* Aligne l'image à droite */
+        }
+}
 

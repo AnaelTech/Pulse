@@ -13,6 +13,13 @@ try {
     echo "Erreur lors de la connexion à la base de données";
     exit;
 }
+
+if (!isset($_SESSION['userInfos'])) {
+    header('Location: home.php');
+    exit();
+}
+
+
 $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
 $postfriends = $postDb->findFriendPosts($_SESSION['userInfos']['id']);
 $posts = array_merge($postDb->findAll());

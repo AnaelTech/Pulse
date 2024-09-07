@@ -5,6 +5,11 @@ require_once __DIR__ . "/functions/ConnectDB.php";
 require_once __DIR__ . "/classes/UserSearch.php";
 require_once __DIR__ . "/classes/UserTable.php";
 
+if (!isset($_SESSION['userInfos'])) {
+    header('Location: home.php');
+    exit();
+}
+
 if (!isset($_GET['search']) && empty($_GET['search'])) {
     try {
         $pdo = getDbConnection();

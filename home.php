@@ -3,45 +3,62 @@ require_once __DIR__ . "/layout/header.php";
 require_once __DIR__ . "/classes/error.php";
 ?>
 <?php if (isset($_GET['error'])) { ?>
-    <div class="bg-danger text-white w-100 py-5 px-4">
+    <div id="Alert" class="bg-danger text-white w-100 py-5 px-4 fixed-top">
+        <i class="bi bi-exclamation-circle me-2"></i>
         <?php echo Errors::getErrorMessage($_GET['error']); ?>
     </div>
+    <script>
+        window.addEventListener('load', function() {
+            const alertElement = document.getElementById('Alert');
+            const navbar = document.getElementById('nav-home');
+
+            if (alertElement) {
+                // Obtenir la hauteur de l'alerte et ajuster la position de la navbar
+                const alertHeight = alertElement.offsetHeight;
+                navbar.style.top = alertHeight + 'px';
+
+                // Cacher l'alerte après 5 secondes
+                setTimeout(function() {
+                    alertElement.classList.add('hide');
+                    // Réinitialiser la position de la navbar après la disparition de l'alerte
+                    setTimeout(() => {
+                        navbar.style.top = '0';
+                    }, 1000); // 1000 millisecondes = 1 seconde (correspond à la durée de la transition)
+                }, 5000);
+            }
+        });
+    </script>
 <?php } ?>
-<nav class="navbar navbar-light bg-white pt-3">
+<!-- Navbar -->
+<nav id="nav-home" class="navbar navbar-light mt-4 rounded-pill container px-3 fixed-top">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand bg-transparent text-black">Pulse</a>
+        <div class="brand">
+            <img src="assets/logoPulse.png" alt="" class="img-fluid">
+        </div>
         <form class="d-flex" method="POST" action="loginProcess.php">
-            <input class="form-control me-2" type="email" placeholder="email" aria-label="email" name="email">
-            <input class="form-control me-2" type="password" placeholder="password" aria-label="password" name="password">
-            <button class="btn btn-outline-primary" type="submit" name="valider">Connexion</button>
+            <label for="email" class="visually-hidden">Email:</label>
+            <input class="form-control mx-4 px-4 rounded-pill" type="email" placeholder="Email" aria-label="email" name="email" required>
+            <label for="password" class="visually-hidden">Password:</label>
+            <input class="form-control mx-4 px-4 rounded-pill" type="password" placeholder="Password" aria-label="password" name="password" required>
+            <button class="btn btn-outline-primary rounded-pill ms-3 px-4" type="submit" name="valider">Connexion</button>
         </form>
     </div>
 </nav>
-<main>
-    <header class="masthead my-5 ">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-8 align-self-end">
-                    <h1 class="font-weight-bold">Pulse</h1>
-                    <hr class="divider" />
-                </div>
-                <div class="col-lg-8 align-self-baseline my-5">
-                    <p class="text-white-75 mb-5">Find your Friends 😁</p>
-                    <a class="btn btn-primary btn-xl" href="inscription.php">S'inscrire</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- <section class="inscription">
-        <div class="container">
-            <div class="col-lg d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-4 mb-4">
-                <div>
-                    <a href="inscription.php" class="btn btn-primary btn-lg">S'inscrire</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-</main>
-</body>
 
-</html>
+<!-- Hero Section -->
+<header id="hero" class="masthead">
+    <div class="container px-4 px-lg-5">
+        <div class="row hero-content">
+            <div class="home-text col-lg-6 align-items-start justify-content-start text-left">
+                <h1 class="font-weight-bold">Elevate Your Brand's Social Game with Social Sizzle</h1>
+                <p class="text-muted">Unlock the power of social media to boost your presence and engagement!</p>
+                <div class="mt-4">
+                    <a class="btn btn-primary btn-xl me-3 rounded-pill" href="inscription.php">Inscription</a>
+                </div>
+            </div>
+            <div class="img-home col-lg-6">
+                <img src="assets/jeunes-discutant-appareils.png" alt="">
+            </div>
+        </div>
+    </div>
+</header>

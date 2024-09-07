@@ -30,9 +30,11 @@ if ($user === false) {
     Utils::redirect('home.php?error=' . Errors::INVALID_ARGUMENT);
 }
 
-// Vérification du mot de passe
-if (!password_verify($password, $user['user_password'])) {
-    Utils::redirect('home.php?error=' . Errors::INVALID_ARGUMENT);
+$fakePasswordHash = '$2y$10$usesomesillystringforsalt$';
+$storedPasswordHash = $user ? $user['user_password'] : $fakePasswordHash;
+
+if (!password_verify($password, $storedPasswordHash)) {
+    Utils::redirect('login.php?error=invalid_credentials');
 }
 
 $_SESSION['userInfos'] = [

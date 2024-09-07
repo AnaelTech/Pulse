@@ -5,6 +5,11 @@ require_once __DIR__ . "/classes/UserPost.php";
 require_once __DIR__ . "/functions/ConnectDB.php";
 require_once __DIR__ . "/classes/FriendshipsTable.php";
 
+if (!isset($_SESSION['userInfos'])) {
+    header('Location: home.php');
+    exit();
+}
+
 try {
     $pdo = getDbConnection();
     $postDbUser = new UserPost($pdo);
@@ -13,6 +18,8 @@ try {
     echo "Erreur lors de la connexion à la base de données";
     exit;
 }
+
+
 $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
 $postsUser = array_merge($postDbUser->findAllPost($_SESSION['userInfos']['id']));
 ?>

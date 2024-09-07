@@ -1,6 +1,11 @@
 <?php
 require_once __DIR__ . "/layout/header.php";
 require_once __DIR__ . "/layout/navbar.php";
+
+if (!isset($_SESSION['userInfos'])) {
+    header('Location: home.php');
+    exit();
+}
 ?>
 <section class="section4 mt-4">
     <div class="container">
