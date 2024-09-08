@@ -35,23 +35,30 @@ require_once __DIR__ . "/classes/error.php";
         <div class="brand">
             <img src="assets/logoPulse.png" alt="" class="img-fluid">
         </div>
-        <form class="d-flex" method="POST" action="loginProcess.php">
-            <label for="email" class="visually-hidden">Email:</label>
-            <input class="form-control mx-4 px-4 rounded-pill" type="email" placeholder="Email" aria-label="email" name="email" required>
-            <label for="password" class="visually-hidden">Password:</label>
-            <input class="form-control mx-4 px-4 rounded-pill" type="password" placeholder="Password" aria-label="password" name="password" required>
-            <button class="btn btn-outline-primary rounded-pill ms-3 px-4" type="submit" name="valider">Connexion</button>
-        </form>
+
+        <a href="" class="btn btn-outline-primary d-lg-none rounded-pill">Connexion</a>
+
+        <div class="d-none d-lg-flex">
+            <form class="d-flex ms-auto mt-2 mt-lg-0" method="POST" action="loginProcess.php">
+                <label for="email-lg" class="visually-hidden">Email:</label>
+                <input id="email-lg" class="form-control mx-2 px-4 rounded-pill" type="email" placeholder="Email" aria-label="email" name="email" required>
+
+                <label for="password-lg" class="visually-hidden">Password:</label>
+                <input id="password-lg" class="form-control mx-2 px-4 rounded-pill" type="password" placeholder="Password" aria-label="password" name="password" required>
+
+                <button class="btn btn-outline-primary rounded-pill ms-3 px-4" type="submit" name="valider">Connexion</button>
+            </form>
+        </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
 <header id="hero" class="masthead">
     <div class="container px-4 px-lg-5">
-        <div class="row hero-content">
+        <div class="hero-content">
             <div class="home-text col-lg-6 align-items-start justify-content-start text-left">
-                <h1 class="font-weight-bold">Elevate Your Brand's Social Game with Social Sizzle</h1>
-                <p class="text-muted">Unlock the power of social media to boost your presence and engagement!</p>
+                <h1 class="font-weight-bold">Dynamisez Votre Pulse et Connectez-vous au Monde</h1>
+                <p class="text-muted">Exploitez le pouvoir des connexions sociales pour amplifier votre voix, élargir votre réseau et interagir comme jamais auparavant !</p>
                 <div class="mt-4">
                     <a class="btn btn-primary btn-xl me-3 rounded-pill" href="inscription.php">Inscription</a>
                 </div>

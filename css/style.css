@@ -60,6 +60,17 @@
         border-color: #FF4C4C; 
         color: white; 
     }
+    @media (max-width: 994px) { 
+        #nav-home {
+            padding: 0 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        #nav-home {
+            padding: 0 10px;
+        }
+    }
 
 }
 
@@ -70,7 +81,8 @@
                 radial-gradient(circle at 50% 10%, #FFD1E8, transparent 30%),
                 linear-gradient(135deg, #FFF0E5, #E2E6EF);
         padding: 250px 0;
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
         display: flex;
         align-items: center;
 
@@ -119,6 +131,45 @@
         .img-home {
             flex: 1; /* L'image occupe 50% de la largeur */
             text-align: right; /* Aligne l'image à droite */
+        }
+
+
+        /*RESPONSIVE*/
+        @media (max-width: 994px) { 
+            #hero {
+                padding: 100px 0; /* Réduire le padding pour les petits écrans */
+            }
+            
+            .hero-content {
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center; 
+            }
+    
+           
+            .img-home img {
+                max-width: 100%;
+                width: 500px;
+                height: auto;
+            }
+    
+            
+            .img-home  {
+                flex: none; 
+                text-align: center; 
+            }
+        }
+    
+        @media (max-width: 576px) {
+            #hero {
+                padding: 50px 0; /* Réduire le padding pour les petits écrans */
+            }
+
+            #hero .img-home img {
+                width: 300px;         /* Redimensionner l'image pour mobile */
+                max-width: 100%;      /* Toujours responsive */
+                height: auto;         /* Maintenir la hauteur originale */
+            }
         }
 }
 

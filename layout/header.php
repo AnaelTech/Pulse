@@ -20,7 +20,11 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/booststrap.bundle.min.js"></script>
-    <title>default</title>
+    <title><?php
+            $filename = basename($_SERVER['PHP_SELF'], ".php");
+            $title = ucfirst($filename);
+            echo $title;
+            ?></title>
 </head>
 
 <body>
