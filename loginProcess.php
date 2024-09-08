@@ -46,4 +46,4 @@ $_SESSION['userInfos'] = [
 ];
 
 // Redirection en fonction de la source
-Utils::redirect($source === 'mobile' ? 'mobile_homepage.php' : 'user_homepage.php');
+Utils::redirect('user_homepage.php');
