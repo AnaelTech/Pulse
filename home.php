@@ -33,7 +33,7 @@ require_once __DIR__ . "/classes/error.php";
 <nav id="nav-home" class="navbar navbar-light mt-4 rounded-pill container px-3 fixed-top">
     <div class="container px-4 px-lg-5">
         <div class="brand">
-            <img src="assets/logoPulse.png" alt="" class="img-fluid">
+            <img src="assets/logoPulse.png" alt="logo Pulse" class="img-fluid">
         </div>
 
         <a href="login-responsive.php" class="btn btn-outline-primary d-lg-none rounded-pill">Connexion</a>
@@ -64,7 +64,7 @@ require_once __DIR__ . "/classes/error.php";
                 </div>
             </div>
             <div class="img-home col-lg-6">
-                <img src="assets/jeunes-discutant-appareils.png" alt="">
+                <img src="assets/jeunes-discutant-appareils.png" alt="jeunes-disutant-home">
             </div>
         </div>
     </div>

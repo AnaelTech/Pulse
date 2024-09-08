@@ -1,3 +1,4 @@
+/******DÉBUT PAGE HOME*****/
 #Alert {
     transition: opacity 0.5s ease-out; /* Transition fluide sur 1 seconde */
 }
@@ -73,6 +74,7 @@
     }
 
 }
+
 
 #hero { 
 
@@ -173,6 +175,10 @@
         }
 }
 
+/******FIN DE PAGE HOME*****/
+
+/*****LOGIN-RESPONSIVE*****/
+
 #login-responsive {
     transition: padding-top 0.5s ease;
     background: radial-gradient(circle at 15% 50%, #FFDFD1, transparent 20%),
@@ -249,4 +255,69 @@
     width: 500px;
     height: auto;
 }
+/******FIN DE PAGE LOGIN-RESPONSIVE*****/
 
+
+
+/*****INSCRIPTION*****/
+#inscription {
+    background: radial-gradient(circle at 15% 50%, #FFDFD1, transparent 20%),
+                radial-gradient(circle at 85% 50%, #D1EFFF, transparent 20%),
+                radial-gradient(circle at 50% 10%, #FFD1E8, transparent 30%),
+                linear-gradient(135deg, #FFF0E5, #E2E6EF); 
+                padding: 100px 0;
+        min-height: 100vh;
+        height: auto;
+        
+}
+
+#inscription .form-control {
+    border: 2px solid #FFDFD1; 
+    box-shadow: none; 
+}
+
+#inscription .form-control:focus {
+    border-color: #FFD1E8; 
+    box-shadow: 0 0 5px rgba(255, 209, 232, 0.5); 
+}
+
+#inscription .btn-outline-primary {
+    border-color: #FF6B6B; 
+    background-color: #FF6B6B; 
+    color: white; 
+    width: 200px;
+    text-align: center;
+}
+
+#inscription .btn-outline-primary:hover {
+    background-color: #FF4C4C;
+    border-color: #FF4C4C; 
+    color: white; 
+}
+
+#inscription .card {
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(10px); 
+    border: none;
+}
+
+#inscription img {
+    max-width: 100%;
+    width: 200px;
+    height: auto;   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 576px) {
+    #inscription {
+        padding: 20px 0;
+    }
+
+    #inscription .card {
+        padding: 0 10px;
+    }
+}
+
+/******FIN PAGE INSCRIPTION*****/

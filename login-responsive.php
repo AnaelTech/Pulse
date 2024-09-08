@@ -60,7 +60,7 @@ require_once __DIR__ . "/classes/error.php";
             <span class="text-center text-muted mt-5 mb-0">Pas de compte ?<a href="inscription.php" class="text-body text-decoration-none"> inscription ici 😊</a></span>
         </form>
         <div class="img-login-responsive">
-            <img src="assets/img-login-responsive.png" alt="">
+            <img src="assets/img-login-responsive.png" alt="connexion-img">
         </div>
     </div>
 </section>
