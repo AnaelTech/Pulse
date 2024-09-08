@@ -16,27 +16,28 @@ require_once __DIR__ . "/classes/error.php";
 ?>
 
 <?php if (isset($_GET['error'])) { ?>
-    <div id="Alert" class="bg-danger text-white w-100 py-5 px-4 fixed-top">
+    <div id="Alert-mobile" class="bg-danger text-white py-5 px-4 fixed-top text-center">
         <i class="bi bi-exclamation-circle me-2"></i>
         <?php echo Errors::getErrorMessage($_GET['error']); ?>
     </div>
     <script>
         window.addEventListener('load', function() {
-            const alertElement = document.getElementById('Alert');
-            const top = document.getElementById('login-responsive');
+            const alertElement = document.getElementById('Alert-mobile');
+            const loginSection = document.getElementById('login-responsive');
 
             if (alertElement) {
-                // Obtenir la hauteur de l'alerte et ajuster la position de la navbar
                 const alertHeight = alertElement.offsetHeight;
-                top.style.top = alertHeight + 'px';
 
-                // Cacher l'alerte après 5 secondes
+
+                loginSection.classList.add('alert-visible');
+
                 setTimeout(function() {
                     alertElement.classList.add('hide');
-                    // Réinitialiser la position de la navbar après la disparition de l'alerte
+
+
                     setTimeout(() => {
-                        top.style.top = '0';
-                    }, 1000); // 1000 millisecondes = 1 seconde (correspond à la durée de la transition)
+                        loginSection.classList.remove('alert-visible');
+                    }, 500);
                 }, 5000);
             }
         });
