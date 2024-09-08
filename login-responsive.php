@@ -6,12 +6,12 @@ require_once __DIR__ . "/classes/error.php";
 // Bloque la page pour les écrans Desktop
 // function isMobileDevice()
 // {
-//     return preg_match('/(android|iphone|ipad|ipod|blackberry|windows phone)/i', $_SERVER['HTTP_USER_AGENT']);
+// return preg_match('/(android|iphone|ipad|ipod|blackberry|windows phone)/i', $_SERVER['HTTP_USER_AGENT']);
 // }
 
 // if (!isMobileDevice()) {
-//     header('Location: home.php');
-//     exit;
+// header('Location: home.php');
+// exit;
 // }
 ?>
 
@@ -57,6 +57,7 @@ require_once __DIR__ . "/classes/error.php";
             <input id="password-lg" class="form-control my-4 mx-2 px-4 rounded-pill" type="password" placeholder="Password" aria-label="password" name="password" required>
 
             <button class="btn btn-outline-primary text-center rounded-pill my-4 ms-3" type="submit" name="valider">Connexion</button>
+            <span class="text-center text-muted mt-5 mb-0">Pas de compte ?<a href="inscription.php" class="text-body text-decoration-none"> inscription ici 😊</a></span>
         </form>
         <div class="img-login-responsive">
             <img src="assets/img-login-responsive.png" alt="">
