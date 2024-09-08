@@ -36,10 +36,10 @@ require_once __DIR__ . "/classes/error.php";
             <img src="assets/logoPulse.png" alt="" class="img-fluid">
         </div>
 
-        <a href="" class="btn btn-outline-primary d-lg-none rounded-pill">Connexion</a>
+        <a href="login-responsive.php" class="btn btn-outline-primary d-lg-none rounded-pill">Connexion</a>
 
         <div class="d-none d-lg-flex">
-            <form class="d-flex ms-auto mt-2 mt-lg-0" method="POST" action="loginProcess.php">
+            <form class="d-flex ms-auto mt-2 mt-lg-0" method="POST" action="loginProcess.php?source=desktop">
                 <label for="email-lg" class="visually-hidden">Email:</label>
                 <input id="email-lg" class="form-control mx-2 px-4 rounded-pill" type="email" placeholder="Email" aria-label="email" name="email" required>
 

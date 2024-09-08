@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require_once 'classes/error.php';
@@ -8,9 +7,11 @@ require_once 'functions/ConnectDB.php';
 require_once __DIR__ . '/classes/email.php';
 require_once __DIR__ . '/classes/UserTable.php';
 
+// Détecter si c'est la version mobile ou desktop
+$source = isset($_GET['source']) ? $_GET['source'] : 'desktop';
 
 if (!isset($_POST['email']) || !isset($_POST['password'])) {
-    Utils::redirect('login.php');
+    Utils::redirect($source === 'mobile' ? 'login-responsive.php' : 'home.php');
 }
 
 [
@@ -23,18 +24,18 @@ try {
     $connectStmt = new UserTable($pdo);
     $user = $connectStmt->findUsersEmail($email);
 } catch (PDOException) {
-    Utils::redirect('home.php?error=' . Errors::DB_CONNECTION);
+    Utils::redirect($source === 'mobile' ? 'login-responsive.php?error=' . Errors::DB_CONNECTION : 'home.php?error=' . Errors::DB_CONNECTION);
 }
 
 if ($user === false) {
-    Utils::redirect('home.php?error=' . Errors::INVALID_ARGUMENT);
+    Utils::redirect($source === 'mobile' ? 'login-responsive.php?error=' . Errors::INVALID_ARGUMENT : 'home.php?error=' . Errors::INVALID_ARGUMENT);
 }
 
 $fakePasswordHash = '$2y$10$usesomesillystringforsalt$';
 $storedPasswordHash = $user ? $user['user_password'] : $fakePasswordHash;
 
 if (!password_verify($password, $storedPasswordHash)) {
-    Utils::redirect('login.php?error=invalid_credentials');
+    Utils::redirect($source === 'mobile' ? 'login-responsive.php?error=invalid_credentials' : 'home.php?error=invalid_credentials');
 }
 
 $_SESSION['userInfos'] = [
@@ -44,4 +45,5 @@ $_SESSION['userInfos'] = [
     'picture'  => $user['user_picture'],
 ];
 
-Utils::redirect('user_homepage.php');
+// Redirection en fonction de la source
+Utils::redirect($source === 'mobile' ? 'mobile_homepage.php' : 'user_homepage.php');
