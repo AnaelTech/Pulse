@@ -1,6 +1,6 @@
 <div class="container mt-5 mb-5">
     <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <div class="card">
                 <div class="d-flex justify-content-between p-2 px-3">
                     <div class="d-flex flex-row align-items-center"> <img src="uploads/user/<?php echo $post['user_picture']; ?>" width="50" class="rounded-circle img-fluid">

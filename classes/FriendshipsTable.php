@@ -23,10 +23,15 @@ class FriendshipsTable extends Table
 
     public function findFriends(int $id): array
     {
-        $stmt = $this->pdo->prepare("SELECT CONCAT(u.user_name, ' ', u.user_lastname) AS complet_name
+        $stmt = $this->pdo->prepare("
+        SELECT 
+            CONCAT(u.user_name, ' ', u.user_lastname) AS complet_name, 
+            u.user_picture
         FROM Users u
-        INNER JOIN " . $this->name . " ON u.id_user = friend_id WHERE user_id =(SELECT id_user FROM Users WHERE id_user = :id);
-        ");
+        INNER JOIN " . $this->name . " ON u.id_user = friend_id 
+        WHERE user_id = (SELECT id_user FROM Users WHERE id_user = :id);
+    ");
+
         $stmt->execute(['id' => $id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

@@ -5,6 +5,10 @@ $email      = $_GET['email']    ?? '';
 
 require_once __DIR__ . "/layout/header.php";
 require_once __DIR__ . "/classes/error.php";
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 <?php if (isset($_GET['error'])) { ?>
     <div class="bg-danger text-white w-100 py-5 px-4">
@@ -22,7 +26,7 @@ require_once __DIR__ . "/classes/error.php";
                             <h2 class="text-uppercase text-center mb-5">Créer un compte</h2>
 
                             <form method="POST" action="registProcess.php">
-
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>" />
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Prénom</label>
                                     <input type="text" id="form3Example1cg" class="form-control form-control-lg rounded-pill" name="name" required />

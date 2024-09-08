@@ -1,3 +1,12 @@
+body {
+    background: radial-gradient(circle at 15% 50%, #FFDFD1, transparent 20%),
+    radial-gradient(circle at 85% 50%, #D1EFFF, transparent 20%),
+    radial-gradient(circle at 50% 10%, #FFD1E8, transparent 30%),
+    linear-gradient(135deg, #FFF0E5, #E2E6EF);
+min-height: 100vh;
+height: auto;
+}
+
 /******DÉBUT PAGE HOME*****/
 #Alert {
     transition: opacity 0.5s ease-out; /* Transition fluide sur 1 seconde */
@@ -321,3 +330,72 @@
 }
 
 /******FIN PAGE INSCRIPTION*****/
+
+/*******NAVBAR USER*****/
+
+#navbarUser {
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(10px); 
+    border: none;
+}
+
+#navbarUser img {
+    max-width: 100%;
+    width: 60px;
+    height: auto;
+}
+
+#navbarUser .btn-outline-primary {
+    border-color: #FF6B6B; 
+    background-color: #FF6B6B; 
+    color: white;
+}
+
+#navbarUser .btn-outline-primary:hover {
+    background-color: #FF4C4C;
+    border-color: #FF4C4C; 
+    color: white; 
+}
+
+#navbarUser .form-control {
+    border: 2px solid #FFDFD1; 
+    box-shadow: none;   
+}
+
+#navbarUser .form-control:focus {
+    border-color: #FFD1E8; 
+    box-shadow: 0 0 5px rgba(255, 209, 232, 0.5); 
+}
+
+/*******FIN NAVBAR USER*****/
+
+/*******USER HOMEPAGE*****/
+#user-homepage {
+    padding-top: 100px;
+}
+
+#user-homepage .card {
+    background-color: white;
+    border: none;
+    padding: 40px;
+}
+
+#user-homepage .card-friends {
+    background-color: white;
+    border: none;
+}
+
+#user-homepage .card-user img{
+    max-width: 100%;
+    width: 40px;
+    height: auto;
+}
+
+#user-homepage .card-user h4 {
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+
+/*******FIN USER HOMEPAGE*****/
