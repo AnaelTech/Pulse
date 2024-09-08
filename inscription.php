@@ -25,22 +25,22 @@ require_once __DIR__ . "/classes/error.php";
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Prénom</label>
-                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg rounded-pill" name="name" />
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg rounded-pill" name="name" required />
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Nom</label>
-                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg rounded-pill" name="lastname" />
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg rounded-pill" name="lastname" required />
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Email</label>
-                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg rounded-pill" name="email" />
+                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg rounded-pill" name="email" required />
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4cg">Mot de passe</label>
-                                    <input type="password" id="form3Example4cg" class="form-control form-control-lg rounded-pill" name="password" />
+                                    <input type="password" id="form3Example4cg" class="form-control form-control-lg rounded-pill" name="password" required />
                                 </div>
 
                                 <div class="d-flex justify-content-center">
