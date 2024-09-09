@@ -367,6 +367,56 @@ height: auto;
     box-shadow: 0 0 5px rgba(255, 209, 232, 0.5); 
 }
 
+#searchBarMobile {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: fixed;
+    bottom: 65px; 
+    left: 0;
+    right: 0;
+    z-index: 999; 
+    transition: all 0.3s ease-in-out;
+}
+
+#searchBarMobile.d-none {
+    display: none;
+}
+
+#searchBarMobile .form-control {
+    border: 2px solid #FFDFD1; 
+    box-shadow: none;   
+}
+
+#searchBarMobile .form-control:focus {
+    border-color: #FFD1E8; 
+    box-shadow: 0 0 5px rgba(255, 209, 232, 0.5); 
+}
+
+#searchBarMobile .btn-outline-primary {
+    border-color: #FF6B6B; 
+    background-color: #FF6B6B;
+    color: white;
+}
+
+#searchBarMobile  .btn-outline-primary:hover {
+    background-color: #FF4C4C;
+    border-color: #FF4C4C;
+    color: white;
+}
+
+#searchBarMobile .btn {
+    width: auto;
+}
+@media (min-width: 992px) {
+    #navbarUserMobile {
+        display: none;
+    }
+    #searchBarMobile {
+        display: none;
+    }
+
+}
 /*******FIN NAVBAR USER*****/
 
 /*******USER HOMEPAGE*****/
@@ -410,6 +460,10 @@ height: auto;
 }
 
 @media (max-width: 970px){
+
+    #user-homepage {
+        padding-top: 50px;
+    }
 
     #user-homepage .card-user {
         height: auto;
@@ -483,6 +537,24 @@ height: auto;
     padding-top: 150px;
 }
 
+#create-post .btn-primary {
+    background-color: #FF6B6B;
+    border-color: #FF6B6B;
+    color: white;           
+}
+
+#create-post .btn-primary:hover {
+    background-color: #FF4C4C;
+    border-color: #FF4C4C;
+    color: white; 
+}
+
+@media (max-width: 576px) {
+    #create-post {
+        padding-top: 50px;
+    }
+}
+
 /*******FIN CREATE POST*****/
 
 
@@ -500,6 +572,10 @@ height: auto;
 }
 
 @media (max-width: 576px) {
+    #profil {
+        padding-top: 50px;
+    }
+
     #profil .form-group{
         display: flex;
         flex-direction: column;
@@ -533,6 +609,12 @@ height: auto;
 #all-users {
     padding-top: 150px;
 }
+
+@media (max-width: 576px) {
+    #all-users {
+        padding-top: 50px;
+    }
+}
 /*******FIN ALL USERS*****/
 
 /*******USER PROFIL SEARCH*****/
@@ -558,6 +640,13 @@ height: auto;
     background-color:rgb(25,115,185);
     border-color: rgb(25,115,185);
     color: white; 
+}
+
+@media (max-width: 576px) {
+    #user_profil_search {
+        padding-top: 50px;
+    }
+    
 }
 
 

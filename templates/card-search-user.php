@@ -10,7 +10,7 @@
             <div class="col-lg">
                 <form action="<?php echo $isFriend ? 'removeFriendProcess.php' : 'addfriendsProcess.php'; ?>" method="POST" class="mb-3">
                     <input type="hidden" name="friend_id" value="<?php echo $user['id_user']; ?> ">
-                    <button class="btn btn-outline-secondary pull-right rounded-pill"><a href=""></a><i class="bi bi-plus"></i> <?php echo $isFriend ? 'Unfollow' : 'Add Friend'; ?></button>
+                    <button class="btn btn-outline-secondary pull-right rounded-pill"><a href=""></a> <i class="bi <?php echo $isFriend ? 'bi-x' : 'bi-plus'; ?>"></i> <?php echo $isFriend ? 'Unfollow' : 'Add Friend'; ?></button>
                 </form>
                 <button class="btn btn-outline-primary pull-right rounded-pill "><a href="user_profil_search.php?user_id=<?php echo $user['id_user']; ?>" class="text-white text-decoration-none"><i class="bi bi-eye"></i> Show Profil</a></button>
             </div>

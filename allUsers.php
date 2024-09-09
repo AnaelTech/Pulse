@@ -37,6 +37,7 @@ if (!isset($_GET['search']) && empty($_GET['search'])) {
 $currentUserId = $_SESSION['userInfos']['id'];
 ?>
 <section id="all-users" class="mt-5">
+    <h1 class="text-center my-4">Résultat de votre recherche</h1>
     <div class="container">
         <div class="row">
             <?php

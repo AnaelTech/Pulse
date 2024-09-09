@@ -65,7 +65,7 @@ $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
                                 </div>
 
                                 <div class="form-group mt-3">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary rounded-pill">
                                         Post
                                     </button>
                                     <button class="btn btn-default">
