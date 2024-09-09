@@ -484,3 +484,17 @@ height: auto;
 }
 
 /*******FIN CREATE POST*****/
+
+/*******PROFIL*****/
+#profil {
+    padding-top: 150px;
+}
+
+#profil .bg-profil {
+    background-color:#FF6B6B;
+    backdrop-filter: blur(10px); 
+    border: none;
+    height: 200px;
+}
+
+/*******FIN PROFIL*****/
