@@ -1,6 +1,6 @@
-<div id="card-post" class="container mt-5 mb-5">
+<div id="card-post" class="container my-5">
     <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8 col-md-12 col-sm-12">
             <div class="card">
                 <div class="d-flex justify-content-between p-2 px-3">
                     <div class="d-flex flex-row align-items-center">
@@ -21,18 +21,18 @@
                     <hr>
                     <p class="post"><?php echo $post['post_content']; ?></p>
                     <hr>
-                    <div class="comments">
+                    <!-- <div class="comments">
                         <div class="d-flex flex-row align-items-center mb-2"> <img src="http://unsplash.it/g/50?random&gravity=center" width="50" class="rounded-circle img-fluid">
-                            <div class="d-flex flex-row px-5"> <span class="name">friends1 : </span> <small class="comment-text px-2">I like this alot!</small>
+                            <div class="d-flex flex-row px-5 comment"> <span class="name">friends1 : </span> <small class="comment-text px-2">I like this alot!</small>
                             </div>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4"> <img src="http://unsplash.it/g/50?random&gravity=center" width="50" class="rounded-circle img-fluid">
-                            <div class="d-flex flex-row px-5"> <span class="name">friends2 : </span> <small class="comment-text px-2">Thanks for sharing!</small> </div>
+                            <div class="d-flex flex-row px-5 comment"> <span class="name">friends2 : </span> <small class="comment-text px-2">Thanks for sharing!</small> </div>
                         </div>
                         <div class="comment-input"> <input type="text" class="form-control">
                             <div class="fonts"> <i class="fa fa-camera"></i></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
