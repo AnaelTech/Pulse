@@ -408,5 +408,36 @@ height: auto;
     height: 100vh;
 }
 
+@media (max-width: 970px){
+
+    #user-homepage .card-user {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #user-homepage .no-scroll {
+        position: static;
+    }
+
+    #user-homepage .scroll-content {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #user-homepage .no-scroll {
+        position: static;
+    }
+
+    #user-homepage .scroll-content {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
 
 /*******FIN USER HOMEPAGE*****/
