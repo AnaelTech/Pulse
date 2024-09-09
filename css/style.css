@@ -371,7 +371,7 @@ height: auto;
 
 /*******USER HOMEPAGE*****/
 #user-homepage {
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 
@@ -476,6 +476,11 @@ height: auto;
         height: 50px;
     }
 }
-
-
 /*******FIN CARD POST*****/
+
+/*******CREATE POST*****/
+#create-post {
+    padding-top: 150px;
+}
+
+/*******FIN CREATE POST*****/
