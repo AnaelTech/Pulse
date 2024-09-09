@@ -27,11 +27,14 @@ if (isset($_FILES['postPicture'])) {
         );
         $uploadedFilename = $fileUpload->upload();
         $isUploaded = true;
+
+        $currentDate = (new DateTime())->format('Y-m-d H:i:s');
+
         $imagesDb->insert([
             'post_image' => $uploadedFilename,
             'post_content' => $_POST['description'],
             'user_id' => $userId,
-
+            'post_date' => $currentDate,
         ],);
 
         Utils::redirect('user_homepage.php');

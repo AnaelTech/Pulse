@@ -4,11 +4,14 @@ require_once __DIR__ . "/layout/navbar.php";
 require_once __DIR__ . "/classes/UserPost.php";
 require_once __DIR__ . "/functions/ConnectDB.php";
 require_once __DIR__ . "/classes/FriendshipsTable.php";
+require_once __DIR__ . '/functions/utilities.php';
+require_once __DIR__ . '/classes/Like.php';
 
 try {
     $pdo = getDbConnection();
     $postDb = new UserPost($pdo);
     $friendsDb = new FriendshipsTable($pdo);
+    $likeDb = new Like($pdo);
 } catch (PDOException) {
     echo "Erreur lors de la connexion à la base de données";
     exit;
@@ -18,11 +21,31 @@ if (!isset($_SESSION['userInfos'])) {
     header('Location: home.php');
     exit();
 }
+$likedPosts = $likeDb->getUserLikedPosts($pdo, $_SESSION['userInfos']['id']);
+
+if (!empty($_GET['like'])) {
+    $postId = $_GET['like'];
+    if (!in_array($postId, $likedPosts)) {
+        $likeDb->likePost($pdo, $_SESSION['userInfos']['id'], $postId);
+    }
+    header('Location: user_homepage.php');
+    exit();
+}
+
+if (!empty($_GET['dislike'])) {
+    $postId = $_GET['dislike'];
+    if (in_array($postId, $likedPosts)) {
+        $likeDb->dislikePost($pdo, $_SESSION['userInfos']['id'], $postId);
+    }
+    header('Location: user_homepage.php');
+    exit();
+}
 
 
 $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
 $postfriends = $postDb->findFriendPosts($_SESSION['userInfos']['id']);
 $posts = array_merge($postDb->findAll());
+
 ?>
 
 <section id="user-homepage" class="section-friend"> <!-- ICI on met si on veut un backgroud à la section en ajoutant sa class -->
@@ -68,18 +91,28 @@ $posts = array_merge($postDb->findAll());
                             <div class="col-lg">
                                 <div class="mb-4 text-center">
                                     <?php
+                                    $displayedPosts = [];
                                     $found = false;
                                     foreach ($posts as $post) {
+                                        $isLiked = in_array($post['id_post'], $likedPosts);
                                         if ($_SESSION['userInfos']['id'] === $post['user_id']) {
-                                            require 'templates/card-post.php';
-                                            $found = true;
+                                            if (!in_array($post['id_post'], $displayedPosts)) {
+                                                $timeAgo = time_elapsed_string($post['post_date']);
+                                                require 'templates/card-post.php';
+                                                $found = true;
+                                                $displayedPosts[] = $post['id_post'];
+                                            }
                                         }
                                     }
                                     if (!$found) {
                                         echo "Nothing for you today";
                                     }
                                     foreach ($postfriends as $postfriend) {
-                                        require 'templates/card-post.php';
+                                        if (!in_array($postfriend['id_post'], $displayedPosts)) {
+                                            $timeAgo = time_elapsed_string($postfriend['post_date']);
+                                            require 'templates/card-post.php';
+                                            $displayedPosts[] = $postfriend['id_post'];
+                                        }
                                     }
                                     ?>
                                 </div>

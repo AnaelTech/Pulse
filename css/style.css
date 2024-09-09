@@ -374,6 +374,7 @@ height: auto;
     padding-top: 100px;
 }
 
+
 #user-homepage .card {
     background-color: white;
     border: none;
@@ -439,5 +440,14 @@ height: auto;
     }
 }
 
-
 /*******FIN USER HOMEPAGE*****/
+
+/*******CARD POST*****/
+#card-post .like {
+    cursor: pointer;
+}
+
+#card-post .like i {
+    color: red;
+}
+/*******FIN CARD POST*****/

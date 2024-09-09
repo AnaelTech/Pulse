@@ -11,16 +11,19 @@ class UserPost extends Table
 
     public function insert(array $data)
     {
-        $insertQuery = "INSERT INTO " . $this->name . " (`post_image`, `post_content`, `user_id`) VALUES (:post_image, :post_content, :user_id)";
-        // 1 - Préparation
+        $insertQuery = "INSERT INTO " . $this->name . " (`post_image`, `post_content`, `user_id`, `post_date`) 
+                    VALUES (:post_image, :post_content, :user_id, :post_date)";
+
         $stmt = $this->pdo->prepare($insertQuery);
-        // 2 - Exécution
+
         $stmt->execute([
             'post_image' => $data['post_image'],
             'post_content' => $data['post_content'],
-            'user_id' => $data['user_id']
+            'user_id' => $data['user_id'],
+            'post_date' => $data['post_date'], // Ajout de la date ici
         ]);
     }
+
 
     public function findAll(): array
     {
