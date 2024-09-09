@@ -24,11 +24,13 @@ Si vous voulez avoir un aperçu sans vous inscrire voici les identifiants d'un u
 
 ## UPDATE NECESSAIRES 🔜
 
-- Mise en forme du Front 
 - Possibilité de delete ses posts 
-- Ajout des commentaires, likes, date (oublie de ma part lors de mes requêtes 😅) et about
-- Meilleure gestion des erreurs
-- Refactoriser
+- Ajout des commentaires, et about
+
+
+## UPDATE DU FRONT  (09/09/2024)
+- Mise en forme du Front
+- Responsive
 
 ## POSTS ✉️
 - [user_homepage.php: Page après la connexion du user](user_homepage.php)
