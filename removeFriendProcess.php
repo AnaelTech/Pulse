@@ -19,7 +19,7 @@ if (isset($_SESSION['userInfos']['id'])) {
     }
 
     // Ajoutez la relation d'amitié en appelant la méthode addFriendships
-    $friendship->addFriendship($idUser, $idFriend);
+    $friendship->removeFriendship($idUser, $idFriend);
     // Redirigez l'utilisateur vers une page de confirmation ou toute autre page appropriée
     Utils::redirect('allUsers.php');
     exit;

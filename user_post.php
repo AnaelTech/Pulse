@@ -36,7 +36,7 @@ $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
                                         <div class="d-flex align-items-center mb-4">
                                             <img src="<?php echo $image; ?>" alt="img-user" class="img-fluid rounded-pill img-friends me-3" style="width: 40px; height: 40px;">
                                             <p class="mb-0">
-                                                <?php echo strtoupper($friend['complet_name']); ?>
+                                                <?php echo strtoupper($friend['complete_name']); ?>
                                                 <span class="badge text-bg-secondary rounded-pill ms-3">Offline</span>
                                             </p>
                                         </div>

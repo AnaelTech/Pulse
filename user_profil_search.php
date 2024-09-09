@@ -25,12 +25,12 @@ $postsUser = array_merge($postDbUser->findAllPost($userId));
 ?>
 
 <main>
-    <section class="h-100">
+    <section id="user_profil_search" class="h-100">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center  h-100">
                 <div class="col-lg">
                     <div class="card">
-                        <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:200px;">
+                        <div class="rounded-top text-white d-flex flex-row bg-user-profil-search">
                             <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
                                 <img src="uploads/user/<?php echo $users['user_picture']; ?>" alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
                             </div>
@@ -65,7 +65,6 @@ $postsUser = array_merge($postDbUser->findAllPost($userId));
                             </div>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <p class="lead fw-normal mb-0">Recent Posts</p>
-                                <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
                             </div>
                             <div class="row">
                                 <div class="col-lg d-flex mb-2">

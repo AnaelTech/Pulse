@@ -497,4 +497,62 @@ height: auto;
     height: 200px;
 }
 
+@media (max-width: 576px) {
+    /* #profil {
+        padding: 0;
+    } */
+}
+
 /*******FIN PROFIL*****/
+
+/*******ALL USERS*****/
+#all-users {
+    padding-top: 150px;
+}
+/*******FIN ALL USERS*****/
+
+/*******USER PROFIL SEARCH*****/
+#user_profil_search {
+    padding-top: 150px;
+}
+
+#user_profil_search .bg-user-profil-search{
+    background-color: #FF6B6B; 
+    backdrop-filter: blur(10px); 
+    border: none;
+    height: 200px;
+
+}
+/*******FIN USER PROFIL SEARCH*****/
+
+/*******TEMPLATE CARD SEARCH USER*****/
+#card-search-user img{
+    max-width: 100%;
+    width: 414px;
+    height: 414px;
+}
+
+#card-search-user .btn-outline-secondary {
+    border-color: rgb(25,110,184); 
+    background-color:rgb(25,110,184);  
+    color: white;
+}
+
+#card-search-user .btn-outline-secondary:hover {
+    background-color:rgb(25,115,185);
+    border-color: rgb(25,115,185);
+    color: white; 
+}
+
+#card-search-user .btn-outline-primary {
+    border-color: #FF6B6B; 
+    background-color: #FF6B6B; 
+    color: white;
+}
+
+#card-search-user .btn-outline-primary:hover {
+    background-color: #FF4C4C;
+    border-color: #FF4C4C; 
+    color: white; 
+}
+/*******FIN TEMPLATE CARD SEARCH USER*****/

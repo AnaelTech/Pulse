@@ -28,9 +28,9 @@ $postsUser = array_merge($postDbUser->findAllPost($_SESSION['userInfos']['id']))
 ?>
 
 <main>
-    <section id="profil" class="h-100">
+    <section id="profil">
         <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center  h-100">
+            <div class="row d-flex justify-content-center">
                 <div class="col-lg">
                     <div class="card">
                         <div class="rounded-top text-white d-flex flex-row bg-profil">
