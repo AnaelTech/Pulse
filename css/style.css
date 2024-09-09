@@ -397,5 +397,16 @@ height: auto;
     padding-top: 5px;
 }
 
+#user-homepage .no-scroll {
+     position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
+
+#user-homepage .scroll-content {
+    overflow-y: auto;
+    height: 100vh;
+}
+
 
 /*******FIN USER HOMEPAGE*****/

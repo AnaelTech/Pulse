@@ -31,7 +31,7 @@ $posts = array_merge($postDb->findAll());
         <div class="row ligne space-between">
             <div class="col-lg">
                 <div class="row ligne space-between">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 no-scroll">
                         <div class="card card-user mb-4">
                             <div class="d-flex flex-row mb-4 justify-content-center">
                                 <img src="uploads/user/<?= $_SESSION['userInfos']['picture']; ?>" alt="img-user" class="img-fluid rounded-pill" style="width: 40px; height: 40px;">
@@ -62,7 +62,7 @@ $posts = array_merge($postDb->findAll());
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 scroll-content">
                         <div class="mb-4 text-center">
                             <h3>Posts</h3>
                             <div class="col-lg">
