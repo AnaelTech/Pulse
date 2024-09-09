@@ -485,6 +485,8 @@ height: auto;
 
 /*******FIN CREATE POST*****/
 
+
+
 /*******PROFIL*****/
 #profil {
     padding-top: 150px;
@@ -498,12 +500,34 @@ height: auto;
 }
 
 @media (max-width: 576px) {
-    /* #profil {
-        padding: 0;
-    } */
+    #profil .form-group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #profil input[type="file"] {
+        display: none;
+    }
+
+    #profil label span {
+        padding: 8px 12px;
+        background: #FF4C4C;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    #profil label span:hover {
+            background: #FF6B6B;
+          }
 }
 
+
+
 /*******FIN PROFIL*****/
+
+
+
 
 /*******ALL USERS*****/
 #all-users {

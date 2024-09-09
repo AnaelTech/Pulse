@@ -46,7 +46,10 @@ $postsUser = array_merge($postDbUser->findAllPost($_SESSION['userInfos']['id']))
                             <div class="form-group has-error ">
                                 <form method="POST" enctype="multipart/form-data" action="user_profilProcess.php">
                                     <div class="pt-4">
-                                        <input type="file" id="image" name="userPicture" />
+                                        <label for="image">
+                                            <span>Choisir une image</span>
+                                            <input type="file" id="image" name="userPicture" />
+                                        </label>
                                     </div>
                                     <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark mt-3" data-mdb-ripple-color="dark" style="z-index: 1;" value="Envoyer">
                                         Edit Picture
