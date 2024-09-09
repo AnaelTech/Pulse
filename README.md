@@ -66,6 +66,10 @@ Je traite deux fois les données et je pense pouvoir le faire en une seule fois 
 
 Une fonctionnalité assez simple à mettre en place, la difficulté était de récupérer les informations des Users avec les requêtes sql inner join que je n'avais pas beaucoup pratiqué mais dans l'ensemble cela c'est bien passé. 
 
+## PICTURES 📷
+![Capture Home Pulse](./assets/capture_readme/home.png)
+![Capture After Connexion](./assets/capture_readme/home-user.png)
+
 ## DEBUG 🔨
 
 Pour les problèmes de code et message d'erreur il était plutôt difficile de travailler sans xdebug pour utiliser le pas-à-pas. J'ai donc utilisé les **exit()**; et les **var_dump** pour voir si mes données étaient bien enregistrées au fur et à mesure. 
