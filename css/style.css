@@ -523,6 +523,20 @@ height: auto;
     height: 200px;
 
 }
+
+#user_profil_search .btn-outline-secondary {
+    border-color: rgb(25,110,184); 
+    background-color:rgb(25,110,184);  
+    color: white;
+}
+
+#user_profil_search .btn-outline-secondary:hover {
+    background-color:rgb(25,115,185);
+    border-color: rgb(25,115,185);
+    color: white; 
+}
+
+
 /*******FIN USER PROFIL SEARCH*****/
 
 /*******TEMPLATE CARD SEARCH USER*****/
