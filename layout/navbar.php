@@ -1,4 +1,3 @@
-<!-- Navbar pour grands écrans (inchangée) -->
 <nav id="navbarUser" class="navbar navbar-light navbar-expand-lg mt-4 rounded-pill container px-3 fixed-top d-none d-lg-flex">
     <div class="container">
         <a class="navbar-brand" href="user_homepage.php">

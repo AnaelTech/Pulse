@@ -1,4 +1,8 @@
 <?php
+if (empty($_SESSION['userInfos'])) {
+    header('Location: home.php');
+    exit();
+}
 require_once __DIR__ . "/layout/header.php";
 require_once __DIR__ . "/layout/navbar.php";
 require_once __DIR__ . "/functions/ConnectDB.php";
@@ -12,10 +16,7 @@ try {
     exit;
 }
 
-if (!isset($_SESSION['userInfos'])) {
-    header('Location: home.php');
-    exit();
-}
+
 
 $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
 ?>

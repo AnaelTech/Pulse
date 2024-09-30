@@ -1,4 +1,8 @@
 <?php
+if (empty($_SESSION['userInfos'])) {
+    header('Location: home.php');
+    exit();
+}
 require_once __DIR__ . "/layout/header.php";
 require_once __DIR__ . "/layout/navbar.php";
 require_once __DIR__ . "/classes/UserPost.php";
@@ -6,6 +10,7 @@ require_once __DIR__ . "/functions/ConnectDB.php";
 require_once __DIR__ . "/classes/FriendshipsTable.php";
 require_once __DIR__ . '/functions/utilities.php';
 require_once __DIR__ . '/classes/Like.php';
+
 
 try {
     $pdo = getDbConnection();
@@ -17,10 +22,8 @@ try {
     exit;
 }
 
-if (!isset($_SESSION['userInfos'])) {
-    header('Location: home.php');
-    exit();
-}
+
+
 $likedPosts = $likeDb->getUserLikedPosts($pdo, $_SESSION['userInfos']['id']);
 
 if (!empty($_GET['like'])) {
