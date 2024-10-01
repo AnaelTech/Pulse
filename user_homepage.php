@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 require_once __DIR__ . "/layout/header.php";
 if (empty($_SESSION['userInfos'])) {
     header('Location: home.php');
@@ -19,7 +21,7 @@ try {
     $likeDb = new Like($pdo);
 } catch (PDOException) {
     echo "Erreur lors de la connexion à la base de données";
-    exit;
+    exit();
 }
 
 
@@ -49,6 +51,7 @@ $friends = $friendsDb->findFriends($_SESSION["userInfos"]["id"]);
 $postfriends = $postDb->findFriendPosts($_SESSION['userInfos']['id']);
 $posts = array_merge($postDb->findAll());
 
+ob_end_flush();
 ?>
 
 <section id="user-homepage" class="section-friend"> <!-- ICI on met si on veut un backgroud à la section en ajoutant sa class -->

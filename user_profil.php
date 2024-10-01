@@ -55,6 +55,9 @@ $postsUser = array_merge($postDbUser->findAllPost($_SESSION['userInfos']['id']))
                                         Edit Picture
                                     </button>
                                 </form>
+                                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-dark mt-3" data-mdb-ripple-color="dark">
+                                    Edit general informations
+                                </button>
                             </div>
                             <div class="d-flex justify-content-end text-center py-1">
                                 <div>

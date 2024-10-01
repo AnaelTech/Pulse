@@ -45,7 +45,6 @@ require_once __DIR__ . "/classes/error.php";
 
                 <label for="password-lg" class="visually-hidden">Password:</label>
                 <input id="password-lg" class="form-control mx-2 px-4 rounded-pill" type="password" placeholder="Password" aria-label="password" name="password" required>
-
                 <button class="btn btn-outline-primary rounded-pill ms-3 px-4" type="submit" name="valider">Connexion</button>
             </form>
         </div>
